@@ -3,313 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이준혁 포트폴리오</title>
+    <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.css" integrity="sha512-n5zPz6LZB0QV1eraRj4OOxRbsV7a12eAGfFcrJ4bBFxxAwwYDp542z5M0w24tKPEhKk2QzjjIpR5hpOjJtGGoA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        first: "#1E1E1E",
+                        second: "#757575",
+                        third: "#B3B3B3",
+                        img: "#D9D9D9",
+                        border: "#E5E7EB"
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
+            font-size: 16px;
+            background: #f4f5f5;
+            scroll-behavior: smooth;
         }
-        </style>
+    </style>
 </head>
 <body>
-    <div class="w-full h-full bg-[#f4f5f5] overflow-hidden">
-        <div id="main" class="h-full flex flex-col items-center justify-center gap-5 text-center px-4" style="display: flex;">
-            <div class="flex flex-col items-center justify-center">
-                <div class="text-2xl font-bold">개발자 이준혁의</div>
-                <div class="text-3xl font-bold">포트폴리오</div>
+    <div id="header" class="fixed w-full bg-white top-0 p-4 flex justify-between">
+        <div id="mainHeader" class="text-2xl font-bold cursor-pointer">이준혁의 포트폴리오</div>
+        <div class="flex gap-8 w-max cursor-pointer">
+            <div id="profileHeader" class="w-32 flex justify-center items-center">Profile</div>
+            <div id="skillHeader" class="w-32 flex justify-center items-center">Skills</div>
+            <div id="projectHeader" class="w-32 flex justify-center items-center">Projects</div>
+        </div>
+    </div>
+    <div id="main" class="w-full h-full flex justify-center items-center flex-col gap-2">
+        <div class="text-center align-middle text-7xl font-bold text-first">이준혁의 포트폴리오</div>
+        <div class="text-center align-middle text-[2rem] text-second">정보를 나눠주고 싶은 개발자<br>이준혁입니다.</div>
+    </div>
+    <div id="profile" class="w-full flex justify-center items-center flex-col gap-8 py-16">
+        <div class="text-center align-middle text-5xl text-first font-bold">Profile</div>
+        <div class="w-max h-max flex bg-white">
+            <div class="gap-16 w-[45rem] p-8 flex flex-wrap justify-center">
+                <div class="flex items-center gap-3 w-44">
+                    <div class="w-12 h-12 rounded-full flex justify-center text-3xl">🔍</div>
+                    <div class="flex flex-col">
+                        <div class="text-2xl font-semibold text-second">이름</div>
+                        <div class="text-third">이준혁</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 w-44">
+                    <div class="w-12 h-12 rounded-full flex justify-center text-3xl">📅</div>
+                    <div class="flex flex-col">
+                        <div class="text-2xl font-semibold text-second">생년월일</div>
+                        <div class="text-third">02.02.03</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 w-44">
+                    <div class="w-12 h-12 rounded-full flex justify-center text-3xl">✏</div>
+                    <div class="flex flex-col">
+                        <div class="text-2xl font-semibold text-second">학력</div>
+                        <div class="text-third">삼육대학교<br>[컴퓨터공학부]</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 w-44">
+                    <div class="w-12 h-12 rounded-full flex justify-center text-3xl">📞</div>
+                    <div class="flex flex-col">
+                        <div class="text-2xl font-semibold text-second">연락처</div>
+                        <div class="text-third">010-8999-8416</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 w-44">
+                    <div class="w-12 h-12 rounded-full flex justify-center text-3xl">✉</div>
+                    <div class="flex flex-col">
+                        <div class="text-2xl font-semibold text-second">이메일</div>
+                        <div class="text-third">llejh2002@<br>gmail.com</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 w-44">
+                    <div class="w-12 h-12 rounded-full flex justify-center text-3xl">💻</div>
+                    <div class="flex flex-col">
+                        <div class="text-2xl font-semibold text-second">깃허브</div>
+                        <div class="text-third">github.com<br>/co-troll</div>
+                    </div>
+                </div>
+            </div>
+            <img class="w-60 h-80 bg-img" src="" alt="사진"></img>
+        </div>
+    </div>
+    <div id="skill" class="w-full flex justify-center items-center flex-col gap-8 py-16">
+        <div class="text-center align-middle text-5xl text-first font-bold">Skills</div>
+        <div class="bg-white border-2 border-border rounded-t-lg flex flex-col w-[60rem]">
+            <div class="w-full flex justify-center items-center cursor-pointer">
+                <div id="skillAll" class="w-full text-center align-middle border-b-2 border-r-2 border-border p-1 font-semibold text-third" style="border-bottom-color: black; color: black">All</div>
+                <div id="skillFE" class="w-full text-center align-middle border-b-2 border-r-2 border-border p-1 font-semibold text-third">FE</div>
+                <div id="skillBE" class="w-full text-center align-middle border-b-2 border-r-2 border-border p-1 font-semibold text-third">BE</div>
+                <div id="skillLa" class="w-full text-center align-middle border-b-2 border-border p-1 font-semibold text-third">Language</div>
+            </div>
+            <div id="Shtml" class="w-full flex gap-4 px-4 py-2 items-center">
+                <div class="bg-[#E34F26] w-14 h-14 p-1">
+                    <svg fill="white" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+                </div>
+                <div class="flex flex-col">
+                    <div class="align-middle font-semibold text-second">HTML</div>
+                    <div class="align-middle text-xs text-third">- 목적에 맞는 태그를 잘 활용하여 문서를 작성할 수 있음<br>
+                        - 구역별로 어떤 요소가 배치되어있는지 알고 구조화할 수 있음<br>
+                        - 해당 태그에 대해 어떤 속성이 있고 그 속성들을 잘 활용할 수 있음</div>
+                </div>
+            </div>
+            <div id="Scss" class="w-full flex gap-4 px-4 py-2 items-center">
+                <div class="bg-[#1572B6] w-14 h-14 p-1">
+                    <svg fill="white" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
+                </div>
+                <div class="flex flex-col">
+                    <div class="align-middle font-semibold text-second">CSS</div>
+                    <div class="align-middle text-xs text-third">- 환경에 따른 반응형 디자인을 작성할 수 있음<br>
+                        - 사용자가 사용하기 편한 디자인이 무엇인지 파악하고 구상할 수 있음<br>
+                        - 요구하는 디자인을 정확하고 빠르게 작성할 수 있음</div>
+                </div>
+            </div>
+            <div id="Sjs" class="w-full flex gap-4 px-4 py-2 items-center">
+                <div class="bg-[#F7DF1E] w-14 h-14 p-1">
+                    <svg fill="white" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+                </div>
+                <div class="flex flex-col">
+                    <div class="align-middle font-semibold text-second">JavaScript</div>
+                    <div class="align-middle text-xs text-third">- ES6 문법이 무엇인지 알고 사용할 수 있음<br>
+                        - 콜스택 작동되는 방식을 이해하고 잘 활용할 수 있음<br>
+                        - 비동기 처리가 되는 방식을 이해하고 잘 활용할 수 있음</div>
+                </div>
+            </div>
+            <div id="Sts" class="w-full flex gap-4 px-4 py-2 items-center">
+                <div class="bg-[#3178C6] w-14 h-14 p-1">
+                    <svg fill="white" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></svg>
+                </div>
+                <div class="flex flex-col">
+                    <div class="align-middle font-semibold text-second">TypeScript</div>
+                    <div class="align-middle text-xs text-third">- 인터페이스를 활용하여 클래스를 작성할 수 있음<br>
+                        - 정적 타입 시스템 잘 활용할 수 있음</div>
+                </div>
+            </div>
+            <div id="Snode" class="w-full flex gap-4 px-4 py-2 items-center">
+                <div class="bg-[#5FA04E] w-14 h-14 p-1">
+                    <svg fill="white" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/></svg>
+                </div>
+                <div class="flex flex-col">
+                    <div class="align-middle font-semibold text-second">Nodejs</div>
+                    <div class="align-middle text-xs text-third">- 싱글 쓰레드가 무엇인지 알고 설명할수 있음<br>
+                        - npm을 통해 라이브러리를 사용할 수 있음<br>
+                        - 간단한 웹서버을 구축할 수 있음</div>
+                </div>
+            </div>
+            <div id="Sreact" class="w-full flex gap-4 px-4 py-2 items-center">
+                <div class="bg-[#61DAFB] w-14 h-14 p-1">
+                    <svg fill="white" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/></svg>
+                </div>
+                <div class="flex flex-col">
+                    <div class="align-middle font-semibold text-second">React</div>
+                    <div class="align-middle text-xs text-third">- 컴포넌트 재사용을 위한 디자인 패턴을 알고 있으며 활용할 수 있음<br>
+                        - 상태가 무엇인지 알고 상태 관리를 할 수 있음<br>
+                        - 가상 돔이 무엇인지 이해하고 설명할 수 있음</div>
+                </div>
+            </div>
+            <div id="Smysql" class="w-full flex gap-4 px-4 py-2 items-center">
+                <div class="bg-[#4479A1] w-14 h-14 p-1">
+                    <svg fill="white" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.098l1.325.772.36-.622zM15.5 17.588c-.225-.36-.337-.94-.337-1.736 0-1.393.424-2.09 1.27-2.09.443 0 .77.167.977.5.224.362.336.936.336 1.723 0 1.404-.424 2.108-1.27 2.108-.445 0-.77-.167-.978-.5zm-1.658-.425c0 .47-.172.856-.516 1.156-.344.3-.803.45-1.384.45-.543 0-1.064-.172-1.573-.515l.237-.476c.438.22.833.328 1.19.328.332 0 .593-.073.783-.22a.754.754 0 00.3-.615c0-.33-.23-.61-.648-.845-.388-.213-1.163-.657-1.163-.657-.422-.307-.632-.636-.632-1.177 0-.45.157-.81.47-1.085.315-.278.72-.415 1.22-.415.512 0 .98.136 1.4.41l-.213.476a2.726 2.726 0 00-1.064-.23c-.283 0-.502.068-.654.206a.685.685 0 00-.248.524c0 .328.234.61.666.85.393.215 1.187.67 1.187.67.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 00-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 00-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.69 17.69 0 01-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.5-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.25.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 01-.35-.4 8.76 8.76 0 01-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.01-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 01-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 012.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z"/></svg>
+                </div>
+                <div class="flex flex-col">
+                    <div class="align-middle font-semibold text-second">MySQL</div>
+                    <div class="align-middle text-xs text-third">- 중복 데이터 방지를 위한 테이블 분리를 할 수 있음<br>
+                        - 빠른 데이터 읽기 속도를 위한 인덱스 설계를 할 수 있음</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="project" class="w-full flex justify-center items-center flex-col gap-8 py-16">
+        <div class="text-center align-middle text-5xl text-first font-bold">Projects</div>
+        <div class="max-w-[1280px] flex flex-wrap justify-center items-center gap-8 p-4">
+            <div id="botProject" class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
+                <div class="align-middle text-2xl font-semibold w-full">디스코드 일정관리 봇 프로젝트</div>
+                <img src="img/bot.png" class="object-contain w-full h-[252px] bg-img flex justify-center items-center rounded-lg">
+                <div class="w-full text-second">Discordjs 라이브러리와 로스트아크 API를 활요한 게임 일정관리 봇</div>
+                <div class="w-full flex gap-2 cursor-pointer">
+                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-img rounded-lg detailBtn">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
+                        <div class="text-center align-middle font-semibold">DETAIL</div>
+                    </div>
+                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-img rounded-lg githubBtn">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
+                        <div class="text-center align-middle font-semibold">GITHUB</div>
+                    </div>
+                </div>
+            </div>
+            <div id="bookProject" class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
+                <div class="align-middle text-2xl font-semibold w-full">3D 책 일정관리 앱 프로젝트 (Daily Chapter)</div>
+                <img src="img/book.png" class="object-contain w-full h-[252px] bg-img flex justify-center items-center rounded-lg">
+                <div class="w-full text-second">three.js 라이브러리를 활용해 일정을 3d 책의 형태로 시각화한 일정관리 앱</div>
+                <div class="w-full flex gap-2 cursor-pointer">
+                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-img rounded-lg detailBtn">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
+                        <div class="text-center align-middle font-semibold">DETAIL</div>
+                    </div>
+                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-img rounded-lg githubBtn">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
+                        <div class="text-center align-middle font-semibold">GITHUB</div>
+                    </div>
+                </div>
+            </div>
+            <div id="shortProject" class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
+                <div class="align-middle text-2xl font-semibold w-full">유튜브 쇼츠폼 형식 게시판 프로젝트</div>
+                <img src="img/short.png" class="object-contain w-full h-[252px] bg-img flex justify-center items-center rounded-lg">
+                <div class="w-full text-second">유튜브 쇼츠폼의 UI/UX를 참고해서 구현한 게시판 프로젝트</div>
+                <div class="w-full flex gap-2 cursor-pointer">
+                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-img rounded-lg detailBtn">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
+                        <div class="text-center align-middle font-semibold">DETAIL</div>
+                    </div>
+                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-img rounded-lg githubBtn">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
+                        <div class="text-center align-middle font-semibold">GITHUB</div>
+                    </div>
+                </div>
+            </div>
+            <div id="tetrisProject" class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
+                <div class="align-middle text-2xl font-semibold w-full">테트리스 프로젝트</div>
+                <img src="img/tetris.png" class="object-contain w-full h-[252px] bg-img  flex justify-center items-center rounded-lg">
+                <div class="w-full text-second">웹소켓을 활용해 실시간으로 순위가 뒤바뀌는 테트리스 사이트</div>
+                <div class="w-full flex gap-2 cursor-pointer">
+                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-img rounded-lg detailBtn">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
+                        <div class="text-center align-middle font-semibold">DETAIL</div>
+                    </div>
+                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-img rounded-lg githubBtn">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
+                        <div class="text-center align-middle font-semibold">GITHUB</div>
+                    </div>
+                </div>
+            </div>
+            <div id="discordProject" class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
+                <div class="align-middle text-2xl font-semibold w-full">디스코드 카테고리 형식 게시판 프로젝트 </div>
+                <img src="img/discord.png" class="object-contain w-full h-[252px] bg-img  flex justify-center items-center rounded-lg">
+                <div class="w-full text-second">디스코드의 카테고리 설정을 참고해 구현한 게시판 프로젝트</div>
+                <div class="w-full flex gap-2 cursor-pointer">
+                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-img rounded-lg detailBtn">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
+                        <div class="text-center align-middle font-semibold">DETAIL</div>
+                    </div>
+                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-img rounded-lg githubBtn">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
+                        <div class="text-center align-middle font-semibold">GITHUB</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="w-full h-full absolute bg-black bg-opacity-50 z-10 flex justify-center items-center top-0" style="display: none;">
+        <div class="w-[800px] flex flex-col gap-4 p-8 bg-white rounded-2xl">
+            <div id="Mtitle" class="w-full font-bold text-first text-5xl">Title</div>
+            <img src="" id="Mimg" class="object-contain w-full h-[414px] bg-img rounded-lg">
+            <div>
+                <div id="MdesT" class="align-middle text-xl font-semibold text-first">소개</div>
+                <div id="MdesD" class="align-middle">ㅁㅁㅁ</div>
             </div>
             <div>
-                <div class="text-xl font-semibold">정보를 나눠주고 싶은 개발자</div>
-                <div class="text-xl font-semibold">이준혁입니다.</div>
+                <div id="MdateT" class="align-middle text-xl font-semibold text-first">프로젝트 기간</div>
+                <div id="MdateD" class="align-middle ">ㅁㅁㅁ</div>
             </div>
-            <div class="text-sm font-medium text-gray-500">현재 프론트엔드 개발을 희망하고 있습니다</div>
-        </div>
-        <div id="other" class="h-full flex flex-col items-center justify-center gap-4 text-center p-4">
-            <div id="otherTitle" class="text-3xl font-black after:">ABOUT ME</div>
-            <div id="body" class="w-full h-full">
-                <div id="aboutme" class="flex justify-around flex-wrap gap-4 p-3" style="display: none;">
-                    <div class="w-32 flex text-left justify-center items-center p-3 box-border">
-                        <div class="flex gap-2">
-                            <div class="font-bold text-base h-full">🔍</div>
-                            <div>
-                                <div class="font-bold text-base">이름</div>
-                                <div class="font-medium text-xs">이준혁</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-36 flex text-left justify-center items-center p-3">
-                        <div class="flex gap-2">
-                            <div class="font-bold text-base h-full">📅</div>
-                            <div>
-                                <div class="font-bold text-base">생년월일</div>
-                                <div class="font-medium text-xs">02.02.03</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-36 flex text-left justify-center items-start p-3">
-                        <div class="flex gap-2">
-                            <div class="font-bold text-base h-full">✏</div>
-                            <div>
-                                <div class="font-bold text-base">학력</div>
-                                <div class="font-medium text-xs">삼육대학교</div>
-                                <div class="font-medium text-xs">[컴퓨터공학부]</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-36 flex text-left justify-center items-center p-3">
-                        <div class="flex gap-2">
-                            <div class="font-bold text-base h-full">📞</div>
-                            <div>
-                                <div class="font-bold text-base">연락처</div>
-                                <div class="font-medium text-xs">010-8999-8416</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-36 flex text-left justify-center items-center p-3">
-                        <div class="flex gap-2">
-                            <div class="font-bold text-base h-full">✉</div>
-                            <div>
-                                <div class="font-bold text-base">이메일</div>
-                                <div class="font-medium text-xs">llejh2002@gmail.com</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-36 flex text-left justify-center items-center p-3">
-                        <div class="flex gap-2">
-                            <div class="font-bold text-base h-full">💻</div>
-                            <div>
-                                <div class="font-bold text-base">Github</div>
-                                <div class="font-medium text-xs">https://github.com/co-troll</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="skill" class="flex justify-around flex-wrap gap-10" style="display: none;">
-                    <div class="flex text-left flex-col justify-center bg-white w-full border rounded-sm text-base">
-                        <div id="htmlTab" class="cursor-pointer">
-                            <div class="w-full flex justify-between relative border-b pointer-events-none">
-                                <div class="p-1 pl-4 font-semibold">html</div>
-                                <div class="skilldown absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[45deg] right-4 top-2"></div>
-                                <div class="skillup absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[-135deg] right-4 top-3" style="display: none;"></div>
-                            </div>
-                            <div class="skilldes text-sm border-b py-1" style="display: none;">
-                                <div class="w-full p-1 px-4">목적에 맞는 태그를 잘 활용하여 문서를 작성할 수 있음</div>
-                                <div class="w-full p-1 px-4">구역별로 어떤 요소가 배치되어있는지 알고 구조화할 수 있음</div>
-                                <div class="w-full p-1 px-4">해당 태그에 대해 어떤 속성이 있고 그 속성들을 잘 활용할 수 있음</div>
-                            </div>
-                        </div>
-                        <div id="cssTab" class="cursor-pointer">
-                            <div class="w-full flex justify-between relative border-b pointer-events-none">
-                                <div class="p-1 pl-4 font-semibold">CSS</div>
-                                <div class="skilldown absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[45deg] right-4 top-2"></div>
-                                <div class="skillup absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[-135deg] right-4 top-3" style="display: none;"></div>
-                            </div>
-                            <div class="skilldes text-sm border-b py-1" style="display: none;">
-                                <div class="w-full p-1 px-4">환경에 따른 반응형 디자인을 작성할 수 있음</div>
-                                <div class="w-full p-1 px-4">사용자가 사용하기 편한 디자인이 무엇인지 파악하고 구상할 수 있음</div>
-                                <div class="w-full p-1 px-4">요구하는 디자인을 정확하고 빠르게 작성할 수 있음</div>
-                            </div>
-                        </div>
-                        <div id="jsTab" class="cursor-pointer">
-                            <div class="w-full flex justify-between relative border-b pointer-events-none">
-                                <div class="p-1 pl-4 font-semibold">JavaScript</div>
-                                <div class="skilldown absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[45deg] right-4 top-2"></div>
-                                <div class="skillup absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[-135deg] right-4 top-3" style="display: none;"></div>
-                            </div>
-                            <div class="skilldes text-sm border-b py-1" style="display: none;">
-                                <div class="w-full p-1 px-4">ES6 문법이 무엇인지 알고 사용할 수 있음</div>
-                                <div class="w-full p-1 px-4">콜스택 작동되는 방식을 이해하고 잘 활용할 수 있음</div>
-                                <div class="w-full p-1 px-4">비동기 처리가 되는 방식을 이해하고 잘 활용할 수 있음</div>
-                            </div>
-                        </div>
-                        <div id="tsTab" class="cursor-pointer">
-                            <div class="w-full flex justify-between relative border-b pointer-events-none">
-                                <div class="p-1 pl-4 font-semibold">TypeScript</div>
-                                <div class="skilldown absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[45deg] right-4 top-2"></div>
-                                <div class="skillup absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[-135deg] right-4 top-3" style="display: none;"></div>
-                            </div>
-                            <div class="skilldes text-sm border-b py-1" style="display: none;">
-                                <div class="w-full p-1 px-4">인터페이스를 활용하여 클래스를 작성할 수 있음</div>
-                                <div class="w-full p-1 px-4">정적 타입 시스템 잘 활용할 수 있음</div>
-                                <div class="w-full p-1 px-4">자바스크립트 대신 타입스크립트를 사용하려고 노력함</div>
-                            </div>
-                        </div>
-                        <div id="nodejsTab" class="cursor-pointer">
-                            <div class="w-full flex justify-between relative border-b pointer-events-none">
-                                <div class="p-1 pl-4 font-semibold">Node.js</div>
-                                <div class="skilldown absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[45deg] right-4 top-2"></div>
-                                <div class="skillup absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[-135deg] right-4 top-3" style="display: none;"></div>
-                            </div>
-                            <div class="skilldes text-sm border-b py-1" style="display: none;">
-                                <div class="w-full p-1 px-4">싱글 쓰레드가 무엇인지 알고 설명할수 있음</div>
-                                <div class="w-full p-1 px-4">npm을 통해 라이브러리를 사용할 수 있음</div>
-                                <div class="w-full p-1 px-4">간단한 웹서버을 구축할 수 있음</div>
-                            </div>
-                        </div>
-                        <div id="reactTab" class="cursor-pointer">
-                            <div class="w-full flex justify-between relative border-b pointer-events-none">
-                                <div class="p-1 pl-4 font-semibold">React</div>
-                                <div class="skilldown absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[45deg] right-4 top-2"></div>
-                                <div class="skillup absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[-135deg] right-4 top-3" style="display: none;"></div>
-                            </div>
-                            <div class="skilldes text-sm border-b py-1" style="display: none;">
-                                <div class="w-full p-1 px-4">컴포넌트 재사용을 위한 디자인 패턴을 알고 있으며 활용할 수 있음</div>
-                                <div class="w-full p-1 px-4">상태가 무엇인지 알고 상태 관리를 할 수 있음</div>
-                                <div class="w-full p-1 px-4">가상 돔이 무엇인지 이해하고 설명할 수 있음</div>
-                            </div>
-                        </div>
-                        <div id="mysqlTab" class="cursor-pointer">
-                            <div class="w-full flex justify-between relative pointer-events-none">
-                                <div class="p-1 pl-4 font-semibold">MySQL</div>
-                                <div class="skilldown absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[45deg] right-4 top-2"></div>
-                                <div class="skillup absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[-135deg] right-4 top-3" style="display: none;"></div>
-                            </div>
-                            <div class="skilldes text-sm py-1" style="display: none;">
-                                <div class="w-full p-1 px-4">중복 데이터 방지를 위한 테이블 분리를 할 수 있음</div>
-                                <div class="w-full p-1 px-4">빠른 데이터 읽기 속도를 위한 인덱스 설계를 할 수 있음</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="project" class="flex justify-around flex-wrap gap-10" style="display: none;">
-                    <div class="flex text-left flex-col justify-center bg-white w-full border rounded-sm text-base">
-                        <div id="discordTab" class="cursor-pointer">
-                            <div class="w-full flex justify-between relative border-b pointer-events-none">
-                                <div class="p-1 pl-4 font-semibold">디스코드 일정관리 봇 프로젝트</div>
-                                <div class="projectdown absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[45deg] right-4 top-2"></div>
-                                <div class="projectup absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[-135deg] right-4 top-3" style="display: none;"></div>
-                            </div>
-                            <div class="projectdes text-xs border-b py-1" style="display: none;">
-                                <div class="w-full p-1 px-4 text-gray-400">2024.10 (개인 프로젝트)</div>
-                                <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/f8fbd611-03fe-499e-9f28-f1e77fa9a53e/533213ee-1b35-49c2-a3ac-7528925bd582/image.png" alt="">
-                                <div class="w-full p-1 px-4 font-semibold">소개</div>
-                                <div class="w-full p-1 px-4 pl-6">Discordjs 라이브러리와 로스트아크 API를 활요한 게임 일정관리 봇</div>
-                                <div class="w-full p-1 px-4 font-semibold">주요 기능</div>
-                                <div class="w-full p-1 px-4 pl-6">로스트아크 api를 활용해 유저 정보 데이터베이스에 저장<br>
-                                    버튼 형식으로 일정을 관리</div>
-                                    <div class="w-full p-1 px-4 font-semibold">개발 목적</div>
-                                <div class="w-full p-1 px-4 pl-6">api 사용 연습<br>
-                                    친구들과의 일정을 공유 및 관리를 하기 위해서</div>
-                                <div class="w-full p-1 px-4 flex flex-col gap-1">
-                                    <div class="w-full border px-1.5 py-0.5 rounded-md ">TypeScript • Discord.js • Axios</div>
-                                    <!-- <div class="w-max border px-1.5 py-0.5 rounded-md cursor-pointer font-semibold">🖼 이미지</div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div id="BookTab" class="cursor-pointer">
-                            <div class="w-full flex justify-between relative border-b pointer-events-none">
-                                <div class="p-1 pl-4 font-semibold">3D 책 일정관리 앱 프로젝트 (Daily Chapter)</div>
-                                <div class="projectdown absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[45deg] right-4 top-2"></div>
-                                <div class="projectup absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[-135deg] right-4 top-3" style="display: none;"></div>
-                            </div>
-                            <div class="projectdes text-xs border-b py-1" style="display: none;">
-                                <div class="w-full p-1 px-4 text-gray-400">2024.09.24 ~ 2024.10.24 (4인 팀 프로젝트)</div>
-                                <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/f8fbd611-03fe-499e-9f28-f1e77fa9a53e/533213ee-1b35-49c2-a3ac-7528925bd582/image.png" alt="">
-                                <div class="w-full p-1 px-4 font-semibold">소개</div>
-                                <div class="w-full p-1 px-4 pl-6">three.js 라이브러리를 활용해 일정을 3d 책의 형태로 시각화한 일정관리 앱</div>
-                                <div class="w-full p-1 px-4 font-semibold">본인 기능</div>
-                                <div class="w-full p-1 px-4 pl-6">Threejs를 리액트의 컴포넌트 방식으로 사용할 수 있게 만들어 주는 React Three Fiber(R3F)를 활용해 일정을 3d 책의 형태로 렌더링하는 기능을 구현<br>
-                                    R3F와 Rapier.js를 결합한 React Three Rapier 라이브러리를 활용해 3d 책의 물리엔진을 추가하여 움직이는 애니메이션 기능 구현</div>
-                                    <div class="w-full p-1 px-4 font-semibold">회고</div>
-                                <div class="w-full p-1 px-4 pl-6">three.js를 처음 사용하여 프로젝트를 진행하다 보니 어려움이 있었다는 문제 -> 공식 문서와 여러 매체를 통해서 제공되는 정보를 통해 빠르게 알아갈수 있었고 이 경험을 통해 새로운 기술을 빠르게 배우고 사용하는 능력을 키우게 됨</div>
-                                <div class="w-full p-1 px-4 flex flex-col gap-1">
-                                    <div class="w-full border px-1.5 py-0.5 rounded-md break-all">Nextjs • TypeScript • Axios • Notion • Github • Notion • AWS • Docker • Nestjs • Sequelize • MySQL • SolAPI</div>
-                                    <!-- <div class="w-max border px-1.5 py-0.5 rounded-md cursor-pointer font-semibold">🖼 이미지</div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div id="youtubeTab" class="cursor-pointer">
-                            <div class="w-full flex justify-between relative border-b pointer-events-none">
-                                <div class="p-1 pl-4 font-semibold">유튜브 쇼츠폼 형식 게시판 프로젝트</div>
-                                <div class="projectdown absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[45deg] right-4 top-2"></div>
-                                <div class="projectup absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[-135deg] right-4 top-3" style="display: none;"></div>
-                            </div>
-                            <div class="projectdes text-xs border-b py-1" style="display: none;">
-                                <div class="w-full p-1 px-4 text-gray-400">2024.07.18 ~ 2024.08.05 (3인 팀 프로젝트)</div>
-                                <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/f8fbd611-03fe-499e-9f28-f1e77fa9a53e/533213ee-1b35-49c2-a3ac-7528925bd582/image.png" alt="">
-                                <div class="w-full p-1 px-4 font-semibold">소개</div>
-                                <div class="w-full p-1 px-4 pl-6">유튜브 쇼츠폼의 UI/UX를 참고해서 구현한 게시판 프로젝트</div>
-                                <div class="w-full p-1 px-4 font-semibold">본인 기능</div>
-                                <div class="w-full p-1 px-4 pl-6">원페이지 기법을 활용해 게시판 디자인<br>
-                                    내비게이션 기법을 활용해 스크롤 기능을 구현했으며 마지막 게시글 로딩 시 게시글 추가 렌더링 구현<br>
-                                    Axios를 활용해 서버에서 게시글를 요청하고 이를 자바스크립트 클래스를 활용해 데이터를 객체 형태로 구조화해서 CRUD 기능을 메소드화함</div>
-                                    <div class="w-full p-1 px-4 font-semibold">회고</div>
-                                <div class="w-full p-1 px-4 pl-6">axios 인스턴스 기능을 활용하지 않고 매번 api 요청을 할때마다 동일한 설정을 작성해 유지보수에 어려움이 있었다 -> 프로젝트 초기부터 axios 인스턴스 기능을 활용해 api 요청 설정을 쉽게 관리할 것임을 다짐함<br>
-                                    다른 도메인끼리 토큰이 주고받지 못하는 문제 발생 -> 같은 도메인을 이용</div>
-                                <div class="w-full p-1 px-4 flex flex-col gap-1">
-                                    <div class="w-full border px-1.5 py-0.5 rounded-md break-all">JavaScript • TypeScript • HTML • CSS • Axios • Express • Nestjs • MySQL</div>
-                                    <!-- <div class="w-max border px-1.5 py-0.5 rounded-md cursor-pointer font-semibold">🖼 이미지</div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tetrisTab" class="cursor-pointer">
-                            <div class="w-full flex justify-between relative border-b pointer-events-none">
-                                <div class="p-1 pl-4 font-semibold">테트리스 프로젝트</div>
-                                <div class="projectdown absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[45deg] right-4 top-2"></div>
-                                <div class="projectup absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[-135deg] right-4 top-3" style="display: none;"></div>
-                            </div>
-                            <div class="projectdes text-xs border-b py-1" style="display: none;">
-                                <div class="w-full p-1 px-4 text-gray-400">2024.05.29 ~ 2024.06.05 (개인 프로젝트)</div>
-                                <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/f8fbd611-03fe-499e-9f28-f1e77fa9a53e/533213ee-1b35-49c2-a3ac-7528925bd582/image.png" alt="">
-                                <div class="w-full p-1 px-4 font-semibold">소개</div>
-                                <div class="w-full p-1 px-4 pl-6">웹소켓을 활용해 실시간으로 순위가 뒤바뀌는 테트리스 사이트</div>
-                                <div class="w-full p-1 px-4 font-semibold">주요 기능</div>
-                                <div class="w-full p-1 px-4 pl-6">DOM의 canvas 요소를 활용해 테트리스를 그려냄<br>
-                                    테트리스의 기본적인 로직<br>
-                                    웹소켓을 활용해 실시간으로 점수 기록 시 점수판이 바뀌는 기능 구현</div>
-                                    <div class="w-full p-1 px-4 font-semibold">개발 목적</div>
-                                <div class="w-full p-1 px-4 pl-6">타입스트립트 연습<br>
-                                    웹소켓 사용 연습</div>
-                                <div class="w-full p-1 px-4 flex flex-col gap-1">
-                                    <div class="w-full border px-1.5 py-0.5 rounded-md break-all">WebSocket • Express • TypeScript</div>
-                                    <!-- <div class="w-max border px-1.5 py-0.5 rounded-md cursor-pointer font-semibold">🖼 이미지</div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div id="discordProTab" class="cursor-pointer">
-                            <div class="w-full flex justify-between relative border-b pointer-events-none">
-                                <div class="p-1 pl-4 font-semibold">디스코드 카테고리 형식 게시판 프로젝트 </div>
-                                <div class="projectdown absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[45deg] right-4 top-2"></div>
-                                <div class="projectup absolute *:scroll-arrow w-3 h-3 border-r-2 border-b-2 rounded-sm border-black rotate-[-135deg] right-4 top-3" style="display: none;"></div>
-                            </div>
-                            <div class="projectdes text-xs border-b py-1" style="display: none;">
-                                <div class="w-full p-1 px-4 text-gray-400">2024.05.14 ~ 2024.05.28 (4인 팀 프로젝트)</div>
-                                <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/f8fbd611-03fe-499e-9f28-f1e77fa9a53e/533213ee-1b35-49c2-a3ac-7528925bd582/image.png" alt="">
-                                <div class="w-full p-1 px-4 font-semibold">소개</div>
-                                <div class="w-full p-1 px-4 pl-6">디스코드의 카테고리 설정을 참고해 구현한 게시판 프로젝트</div>
-                                <div class="w-full p-1 px-4 font-semibold">본인 기능</div>
-                                <div class="w-full p-1 px-4 pl-6">DOM 조작을 활용해 카테고리 및 게시판을 동적으로 추가/삭제 기능 구현<br>
-                                    이벤트 처리 기법을 활용해 카테고리 및 게시판의 순서 변경과 게시판 상세 페이지 이동 기능 구현<br>
-                                    로컬 스토리지를 활용해 카테고리 및 게시판 정보를 저장</div>
-                                    <div class="w-full p-1 px-4 font-semibold">회고</div>
-                                <div class="w-full p-1 px-4 pl-6">첫 팀 프로젝트이였어서 Github를 통한 파일 관리 문제가 빈번히 일어났던 문제 -> 처음에 공통적인 부분을 회의를 통해 틀을 작성한 후 브랜치를 나누어서 각자의 부분을 작업<br>
-                                    이벤트 처리 기법을 잘못 사용했던 문제 -> 다른 처리 기법을 사용해 문제 해결</div>
-                                <div class="w-full p-1 px-4 flex flex-col gap-1">
-                                    <div class="w-full border px-1.5 py-0.5 rounded-md break-all">JavaScript • HTML • CSS</div>
-                                    <!-- <div class="w-max border px-1.5 py-0.5 rounded-md cursor-pointer font-semibold">🖼 이미지</div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <div id="MdevT" class="align-middle text-xl font-semibold text-first">개발 형식</div>
+                <div id="MdevD" class="align-middle ">ㅁㅁㅁ</div>
             </div>
+            <div>
+                <div id="MfeaT" class="align-middle text-xl font-semibold text-first">주요 기능</div>
+                <div id="MfeaD" class="align-middle ">ㅁㅁㅁ</div>
+            </div>
+            <div>
+                <div id="MresT" class="align-middle text-xl font-semibold text-first">개발 목적</div>
+                <div id="MresD" class="align-middle ">ㅁㅁㅁ</div>
+            </div>
+            <div id="MskillD" class="border-2 px-1.5 py-0.5 rounded-md break-all">JavaScript • HTML • CSS</div>
         </div>
     </div>
-    <div id="ham" class="absolute right-4 top-4 rounded-lg bg-white border-2 flex p-1 cursor-pointer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg" alt="">
-    </div>
-    <div id="menu" class="absolute right-4 top-16 w-32 rounded-md border-2 bg-white flex justify-center items-center flex-col" style="display: none; color: gray;">
-        <div id="mainMenu" class="w-full text-xl font-bold border-b text-center p-0.5 cursor-pointer" style="color: black;">MAIN</div>
-        <div id="aboutmeMenu" class="w-full text-xl font-bold border-b text-center p-0.5 cursor-pointer">ABOUT ME</div>
-        <div id="skillMenu" class="w-full text-xl font-bold border-b text-center p-0.5 cursor-pointer">SKILLS</div>
-        <div id="projectMenu" class="w-full text-xl font-bold text-center p-0.5 cursor-pointer">PROJECTS</div>
-    </div>
-
 </body>
 <script src="index.js"></script>
 </html>

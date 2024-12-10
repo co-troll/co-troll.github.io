@@ -3,6 +3,7 @@ const tabs = [main, profile, skill, project];
 
 headerTabs.forEach((El, index) => {
     El.addEventListener("click", () => {
+        console.log(header.clientHeight);
         scrollTo({ top: tabs[index].offsetTop - header.clientHeight });
     })
 })
@@ -96,6 +97,7 @@ projectTabs = [botProject, bookProject, shortProject, tetrisProject, discordProj
 
 projectTabs.forEach((El, index) => {
     El.querySelector(".detailBtn").addEventListener("click", (e) => {
+        console.log(e.target);
         modal.style.display = "flex";
         modalTabs.forEach((id, modalI) => {
             id.innerHTML = projectList[index][modalI];

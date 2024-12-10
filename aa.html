@@ -11,14 +11,6 @@
             theme: {
                 extend: {
                     colors: {
-                        first: "#354649",
-                        second: "#6c7a89",
-                        third: "#a3c6c4",
-                        btn: "#e0e7e9",
-                        border: "#e6e7eb",
-                        img: "#d9d9d9"
-                    },
-                    backup_colors: {
                         first: "#1E1E1E",
                         second: "#757575",
                         third: "#B3B3B3",
@@ -37,24 +29,23 @@
             height: 100%;
             font-size: 16px;
             background: #f4f5f5;
-            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
     <div id="header" class="fixed w-full bg-white top-0 p-4 flex justify-between">
-        <div id="mainHeader" class="text-2xl font-bold cursor-pointer text-first">이준혁의 포트폴리오</div>
-        <div class="flex gap-8 w-max cursor-pointer">
-            <div id="profileHeader" class="w-32 flex justify-center items-center font-semibold text-second">Profile</div>
-            <div id="skillHeader" class="w-32 flex justify-center items-center font-semibold text-second">Skills</div>
-            <div id="projectHeader" class="w-32 flex justify-center items-center font-semibold text-second">Projects</div>
+        <div class="text-2xl font-bold cursor-pointer">이준혁의 포트폴리오</div>
+        <div class="flex gap-8 w-max">
+            <div class="w-32 flex justify-center items-center">Profile</div>
+            <div class="w-32 flex justify-center items-center">Skills</div>
+            <div class="w-32 flex justify-center items-center">Projects</div>
         </div>
     </div>
-    <div id="main" class="w-full h-full flex justify-center items-center flex-col gap-2">
+    <div class="w-full h-full flex justify-center items-center flex-col gap-2">
         <div class="text-center align-middle text-7xl font-bold text-first">이준혁의 포트폴리오</div>
         <div class="text-center align-middle text-[2rem] text-second">정보를 나눠주고 싶은 개발자<br>이준혁입니다.</div>
     </div>
-    <div id="profile" class="w-full flex justify-center items-center flex-col gap-8 py-16">
+    <div class="w-full flex justify-center items-center flex-col gap-8 py-16">
         <div class="text-center align-middle text-5xl text-first font-bold">Profile</div>
         <div class="w-max h-max flex bg-white">
             <div class="gap-16 w-[45rem] p-8 flex flex-wrap justify-center">
@@ -104,7 +95,7 @@
             <img class="w-60 h-80 bg-img" src="" alt="사진"></img>
         </div>
     </div>
-    <div id="skill" class="w-full flex justify-center items-center flex-col gap-8 py-16">
+    <div class="w-full flex justify-center items-center flex-col gap-8 py-16">
         <div class="text-center align-middle text-5xl text-first font-bold">Skills</div>
         <div class="bg-white border-2 border-border rounded-t-lg flex flex-col w-[60rem]">
             <div class="w-full flex justify-center items-center cursor-pointer">
@@ -190,123 +181,113 @@
             </div>
         </div>
     </div>
-    <div id="project" class="w-full flex justify-center items-center flex-col gap-8 py-16">
+    <div class="w-full flex justify-center items-center flex-col gap-8 py-16">
         <div class="text-center align-middle text-5xl text-first font-bold">Projects</div>
-        <div class="max-w-[1280px] flex flex-wrap justify-center items-start gap-8 p-4">
-            <div id="botProject" class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
+        <div class="max-w-[1280px] flex flex-wrap justify-center items-center gap-8 p-4">
+            <div class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
                 <div class="align-middle text-2xl font-semibold w-full">디스코드 일정관리 봇 프로젝트</div>
-                <img src="img/bot.png" class="object-contain w-full h-[252px] bg-img flex justify-center items-center rounded-lg">
-                <div class="w-full text-second">Discordjs 라이브러리와 로스트아크 API를 활요한 게임 일정관리 봇 프로젝트</div>
-                <div class="w-full flex gap-2 cursor-pointer">
-                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-btn rounded-lg detailBtn">
-                        <div class="w-6 h-6 rounded-full bg-[#181717] text-center">📄</div>
+                <div class="w-full h-[252px] bg-img"></div>
+                <div class="w-full text-second">Discordjs 라이브러리와 로스트아크 API를 활요한 게임 일정관리 봇</div>
+                <div class="w-full flex gap-2">
+                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-img rounded-lg">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
                         <div class="text-center align-middle font-semibold">DETAIL</div>
                     </div>
-                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-btn rounded-lg githubBtn">
-                        <div class="w-6 h-6 rounded-full bg-white">
-                            <svg role="img" fill="#181717" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        </div>
+                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-img rounded-lg">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
                         <div class="text-center align-middle font-semibold">GITHUB</div>
                     </div>
                 </div>
             </div>
-            <div id="bookProject" class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
+            <div class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
                 <div class="align-middle text-2xl font-semibold w-full">3D 책 일정관리 앱 프로젝트 (Daily Chapter)</div>
-                <img src="img/book.png" class="object-contain w-full h-[252px] bg-img flex justify-center items-center rounded-lg">
-                <div class="w-full text-second">three.js 라이브러리를 활용해 일정을 3d 책의 형태로 시각화한 일정관리 앱 프로젝트</div>
-                <div class="w-full flex gap-2 cursor-pointer">
-                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-btn rounded-lg detailBtn">
-                        <div class="w-6 h-6 rounded-full bg-[#181717] text-center">📄</div>
+                <div class="w-full h-[252px] bg-img"></div>
+                <div class="w-full text-second">three.js 라이브러리를 활용해 일정을 3d 책의 형태로 시각화한 일정관리 앱</div>
+                <div class="w-full flex gap-2">
+                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-img rounded-lg">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
                         <div class="text-center align-middle font-semibold">DETAIL</div>
                     </div>
-                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-btn rounded-lg githubBtn">
-                        <div class="w-6 h-6 rounded-full bg-white">
-                            <svg role="img" fill="#181717" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        </div>
+                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-img rounded-lg">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
                         <div class="text-center align-middle font-semibold">GITHUB</div>
                     </div>
                 </div>
             </div>
-            <div id="shortProject" class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
+            <div class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
                 <div class="align-middle text-2xl font-semibold w-full">유튜브 쇼츠폼 형식 게시판 프로젝트</div>
-                <img src="img/short.png" class="object-contain w-full h-[252px] bg-img flex justify-center items-center rounded-lg">
+                <div class="w-full h-[252px] bg-img"></div>
                 <div class="w-full text-second">유튜브 쇼츠폼의 UI/UX를 참고해서 구현한 게시판 프로젝트</div>
-                <div class="w-full flex gap-2 cursor-pointer">
-                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-btn rounded-lg detailBtn">
-                        <div class="w-6 h-6 rounded-full bg-[#181717] text-center">📄</div>
+                <div class="w-full flex gap-2">
+                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-img rounded-lg">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
                         <div class="text-center align-middle font-semibold">DETAIL</div>
                     </div>
-                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-btn rounded-lg githubBtn">
-                        <div class="w-6 h-6 rounded-full bg-white">
-                            <svg role="img" fill="#181717" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        </div>
+                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-img rounded-lg">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
                         <div class="text-center align-middle font-semibold">GITHUB</div>
                     </div>
                 </div>
             </div>
-            <div id="tetrisProject" class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
+            <div class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
                 <div class="align-middle text-2xl font-semibold w-full">테트리스 프로젝트</div>
-                <img src="img/tetris.png" class="object-contain w-full h-[252px] bg-img  flex justify-center items-center rounded-lg">
+                <div class="w-full h-[252px] bg-img"></div>
                 <div class="w-full text-second">웹소켓을 활용해 실시간으로 순위가 뒤바뀌는 테트리스 사이트</div>
-                <div class="w-full flex gap-2 cursor-pointer">
-                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-btn rounded-lg detailBtn">
-                        <div class="w-6 h-6 rounded-full bg-[#181717] text-center">📄</div>
+                <div class="w-full flex gap-2">
+                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-img rounded-lg">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
                         <div class="text-center align-middle font-semibold">DETAIL</div>
                     </div>
-                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-btn rounded-lg githubBtn">
-                        <div class="w-6 h-6 rounded-full bg-white">
-                            <svg role="img" fill="#181717" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        </div>
+                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-img rounded-lg">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
                         <div class="text-center align-middle font-semibold">GITHUB</div>
                     </div>
                 </div>
             </div>
-            <div id="discordProject" class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
+            <div class="w-[30rem] flex flex-col justify-center items-center gap-2 p-4 rounded-2xl bg-white border-2 border-border">
                 <div class="align-middle text-2xl font-semibold w-full">디스코드 카테고리 형식 게시판 프로젝트 </div>
-                <img src="img/discord.png" class="object-contain w-full h-[252px] bg-img  flex justify-center items-center rounded-lg">
+                <div class="w-full h-[252px] bg-img"></div>
                 <div class="w-full text-second">디스코드의 카테고리 설정을 참고해 구현한 게시판 프로젝트</div>
-                <div class="w-full flex gap-2 cursor-pointer">
-                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-btn rounded-lg detailBtn">
-                        <div class="w-6 h-6 rounded-full bg-[#181717] text-center">📄</div>
+                <div class="w-full flex gap-2">
+                    <div class="flex justify-center items-center gap-4 px-4 py-2  bg-img rounded-lg">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
                         <div class="text-center align-middle font-semibold">DETAIL</div>
                     </div>
-                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-btn rounded-lg githubBtn">
-                        <div class="w-6 h-6 rounded-full bg-white">
-                            <svg role="img" fill="#181717" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        </div>
+                    <div class="flex justify-center items-center gap-4 px-4 py-2 bg-img rounded-lg">
+                        <div class="w-6 h-6 rounded-full bg-second"></div>
                         <div class="text-center align-middle font-semibold">GITHUB</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="modal" class="w-full h-full fixed bg-black bg-opacity-50 z-10 flex justify-center items-center top-0" style="display: none;">
-        <div id="modalTab" class="absolute top-8 w-[800px] h-5/6 flex flex-col gap-4 p-8 bg-white rounded-2xl overflow-y-scroll">
-            <div id="Mtitle" class="w-full font-bold text-first text-5xl">Title</div>
-            <img src="" id="Mimg" class="object-contain w-full h-[414px] bg-img rounded-lg">
+    <div id="modal" class="w-full h-full absolute bg-black bg-opacity-50 z-10 flex justify-center items-center top-0" style="display: none;">
+        <div class="w-3/4 flex flex-col gap-4 p-8 bg-white rounded-2xl">
+            <div id="title" class="w-full font-bold text-first text-5xl">Title</div>
+            <div id="img" class="w-full h-[414px] bg-img"></div>
             <div>
-                <div id="MdesT" class="align-middle text-xl font-semibold text-first">소개</div>
-                <div id="MdesD" class="align-middle">ㅁㅁㅁ</div>
+                <div id="desT" class="align-middle text-xl font-semibold text-first">소개</div>
+                <div id="desD" class="align-middle">ㅁㅁㅁ</div>
             </div>
             <div>
-                <div id="MdateT" class="align-middle text-xl font-semibold text-first">프로젝트 기간</div>
-                <div id="MdateD" class="align-middle ">ㅁㅁㅁ</div>
+                <div id="dateT" class="align-middle text-xl font-semibold text-first">프로젝트 기간</div>
+                <div id="dateD" class="align-middle ">ㅁㅁㅁ</div>
             </div>
             <div>
-                <div id="MdevT" class="align-middle text-xl font-semibold text-first">개발 형식</div>
-                <div id="MdevD" class="align-middle ">ㅁㅁㅁ</div>
+                <div id="devT" class="align-middle text-xl font-semibold text-first">개발 형식</div>
+                <div id="devD" class="align-middle ">ㅁㅁㅁ</div>
             </div>
             <div>
-                <div id="MfeaT" class="align-middle text-xl font-semibold text-first">주요 기능</div>
-                <div id="MfeaD" class="align-middle ">ㅁㅁㅁ</div>
+                <div id="feaT" class="align-middle text-xl font-semibold text-first">주요 기능</div>
+                <div id="feaD" class="align-middle ">ㅁㅁㅁ</div>
             </div>
             <div>
-                <div id="MresT" class="align-middle text-xl font-semibold text-first">개발 목적</div>
-                <div id="MresD" class="align-middle ">ㅁㅁㅁ</div>
+                <div id="resT" class="align-middle text-xl font-semibold text-first">개발 목적</div>
+                <div id="resD" class="align-middle ">ㅁㅁㅁ</div>
             </div>
-            <div id="MskillD" class="border-2 px-1.5 py-0.5 rounded-md break-all">JavaScript • HTML • CSS</div>
+            <div class="border-2 px-1.5 py-0.5 rounded-md break-all">JavaScript • HTML • CSS</div>
         </div>
     </div>
 </body>
-<script src="index.js"></script>
+<script src="aa.js"></script>
 </html>

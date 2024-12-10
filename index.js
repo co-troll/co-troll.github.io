@@ -34,12 +34,6 @@ skillTabs.forEach((El, index) => {
     })
 })
 
-
-const _body = document.querySelector('body');
-const preventScroll = (e) => {
-    e.preventDefault();
-}
-
 const modalTabs = [Mtitle, Mimg, MdesT, MdesD, MdateT, MdateD, MdevT, MdevD, MfeaT, MfeaD, MresT, MresD, MskillD];
 
 const projectList = [
@@ -102,7 +96,6 @@ projectTabs = [botProject, bookProject, shortProject, tetrisProject, discordProj
 
 projectTabs.forEach((El, index) => {
     El.querySelector(".detailBtn").addEventListener("click", (e) => {
-        // _body.addEventListener('wheel', preventScroll, { passive: false });
         modal.style.display = "flex";
         modalTabs.forEach((id, modalI) => {
             id.innerHTML = projectList[index][modalI];
@@ -118,6 +111,5 @@ projectTabs.forEach((El, index) => {
 document.addEventListener("click", (e) => {
     if (e.target === modal) {
         modal.style.display = "none";
-        _body.removeEventListener('wheel', preventScroll, { passive: false });
     }   
 })
